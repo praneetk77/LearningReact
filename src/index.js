@@ -37,14 +37,28 @@ import ReactDOM from "react-dom";
 // );
 
 // Challenge 2
-const name = "Praneet Karna";
-const date = new Date();
-const year = date.getFullYear();
+// const name = "Praneet Karna";
+// const date = new Date();
+// const year = date.getFullYear();
+
+// ReactDOM.render(
+//   <div>
+//     <p> Created by {name}</p>
+//     <p> Copyright {year}</p>
+//   </div>,
+//   document.getElementById("root")
+// );
+
+const imgUrl = "https://picsum.photos/200";
 
 ReactDOM.render(
   <div>
-    <p> Created by {name}</p>
-    <p> Copyright {year}</p>
+    <h1>My favourite foods.</h1>
+    <ul>
+      <img src={imgUrl + "?grayscale"} />
+      <img src={imgUrl} />
+      <img src={imgUrl + "?blur"} />
+    </ul>
   </div>,
   document.getElementById("root")
 );
