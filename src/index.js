@@ -49,16 +49,31 @@ import ReactDOM from "react-dom";
 //   document.getElementById("root")
 // );
 
-const imgUrl = "https://picsum.photos/200";
+// attributes using jsx
+// const imgUrl = "https://picsum.photos/200";
+
+// ReactDOM.render(
+//   <div>
+//     <h1>My favourite foods.</h1>
+//     <ul>
+//       <img src={imgUrl + "?grayscale"} />
+//       <img src={imgUrl} />
+//       <img src={imgUrl + "?blur"} />
+//     </ul>
+//   </div>,
+//   document.getElementById("root")
+// );
+
+//Inline CSS styling
+const customStyle = {
+  color: "red",
+  fontSize: "20px",
+  border: "1px solid black"
+};
+
+customStyle.color = "green";
 
 ReactDOM.render(
-  <div>
-    <h1>My favourite foods.</h1>
-    <ul>
-      <img src={imgUrl + "?grayscale"} />
-      <img src={imgUrl} />
-      <img src={imgUrl + "?blur"} />
-    </ul>
-  </div>,
+  <h1 style={customStyle}>Hello World!</h1>,
   document.getElementById("root")
 );
