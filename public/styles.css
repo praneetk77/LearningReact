@@ -2,3 +2,9 @@ img {
   height: 200px;
   width: 200px;
 }
+
+.heading {
+  font-size: 50px;
+  color: purple;
+  border-bottom: 5px solid black;
+}

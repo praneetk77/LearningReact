@@ -65,15 +65,42 @@ import ReactDOM from "react-dom";
 // );
 
 //Inline CSS styling
+// const customStyle = {
+//   color: "red",
+//   fontSize: "20px",
+//   border: "1px solid black"
+// };
+
+// customStyle.color = "green";
+
+// ReactDOM.render(
+//   <h1 style={customStyle}>Hello World!</h1>,
+//   document.getElementById("root")
+// );
+
+// Challenge 3
+const date = new Date();
+const time = date.getHours();
+var greeting = "";
 const customStyle = {
-  color: "red",
-  fontSize: "20px",
-  border: "1px solid black"
+  color: ""
 };
 
-customStyle.color = "green";
+if (time <= 12) {
+  greeting = "Good Morning!";
+  customStyle.color = "red";
+} else if (time > 12 && time <= 18) {
+  greeting = "Good Evening!";
+  customStyle.color = "green";
+} else {
+  greeting = "Good Night!";
+  customStyle.color = "blue";
+}
 
 ReactDOM.render(
-  <h1 style={customStyle}>Hello World!</h1>,
+  <h1 className="heading" style={customStyle}>
+    {" "}
+    {greeting}{" "}
+  </h1>,
   document.getElementById("root")
 );
