@@ -79,28 +79,44 @@ import ReactDOM from "react-dom";
 // );
 
 // Challenge 3
-const date = new Date();
-const time = date.getHours();
-var greeting = "";
-const customStyle = {
-  color: ""
-};
+// const date = new Date();
+// const time = date.getHours();
+// var greeting = "";
+// const customStyle = {
+//   color: ""
+// };
 
-if (time <= 12) {
-  greeting = "Good Morning!";
-  customStyle.color = "red";
-} else if (time > 12 && time <= 18) {
-  greeting = "Good Evening!";
-  customStyle.color = "green";
-} else {
-  greeting = "Good Night!";
-  customStyle.color = "blue";
-}
+// if (time <= 12) {
+//   greeting = "Good Morning!";
+//   customStyle.color = "red";
+// } else if (time > 12 && time <= 18) {
+//   greeting = "Good Evening!";
+//   customStyle.color = "green";
+// } else {
+//   greeting = "Good Night!";
+//   customStyle.color = "blue";
+// }
+
+// ReactDOM.render(
+//   <h1 className="heading" style={customStyle}>
+//     {" "}
+//     {greeting}{" "}
+//   </h1>,
+//   document.getElementById("root")
+// );
+
+// Challenge 4 - Importing from modules
+import { add, subtract, multiply, divide } from "./calculator.js";
 
 ReactDOM.render(
-  <h1 className="heading" style={customStyle}>
-    {" "}
-    {greeting}{" "}
-  </h1>,
+  <div>
+    <h1>My favourite foods.</h1>
+    <ul>
+      <li>{add(1, 2)}</li>
+      <li>{subtract(5, 3)}</li>
+      <li>{multiply(3, 2)}</li>
+      <li>{divide(8, 2)}</li>
+    </ul>
+  </div>,
   document.getElementById("root")
 );
